@@ -30,7 +30,6 @@ s3.listObjects({ Bucket: argv.bucket }, function(err, data) {
     console.log(data.Contents.length + " files found in '"+argv.bucket+"' bucket");
 
     data.Contents.forEach(function(currentValue, index, array){
-
       // Check if the file already exists?
       fs.exists(argv.bucket + "/" + currentValue.Key, function(exists){
 
